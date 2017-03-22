@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageOne">
+        <div data-role="header">
+            <h1>页面事件</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>页面已创建,页面已完成</p>
+            <a href="www.baidu.com">外部页面</a>
+            <br><br>
+            <a href="ho.com">外部页面不存在</a>
+            <p>页面一</p>
+            <a href="#pageTwo" data-transition="pop">转到页面二</a>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+
+    <div data-role="page" id="pageTwo">
+        <div data-role="header">
+            <h1>页眉文本</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <p>页面二</p>
+            <a href="#pageOne" data-transition="pop">转到页面一</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>页脚文本</h1>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).on("pagebeforecreate",function(){
+        alert("pagebeforecreate 事件触发 - 页面即将初始化。jQuery Mobile 还未增强页面");
+    })
+    $(document).on("pagecreate",function(){
+        alert("pagecreate 事件触发 - 页面已经创建，但还未增强完成");
+    });
+    $(document).on("pagecontainerload",function(event,data){
+        alert("pagecontainerload 事件触发!\nURL: " + data.url);
+    });
+    $(document).on("pagecontainerloadfailed",function(event,data){
+        alert("抱歉，被请求页面不存在。");
+    });
+    $(document).on("pagebeforeshow","#pagetwo",function(){
+        alert("触发 pagebeforeshow 事件 - 页面二即将显示");
+    });
+    $(document).on("pageshow","#pagetwo",function(){
+        alert("触发 pageshow 事件 - 现在显示页面二");
+    });
+    $(document).on("pagebeforehide","#pagetwo",function(){
+        alert("触发 pagebeforehide 事件 - 页面二即将隐藏");
+    });
+    $(document).on("pagehide","#pagetwo",function(){
+        alert("触发 pagehide 事件 - 现在隐藏页面二");
+    });
+</script>
+</html>

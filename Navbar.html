@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<div data-role="page" id="pageOne">
+    <div data-role="header">
+        <h1>欢迎访问我的主页</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">我们</a></li>
+                <li><a href="#">购物</a></li>
+            </ul>
+        </div>
+
+
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#" data-icon="arrow-r">我们</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="right">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#" data-icon="arrow-r">我们</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="left">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#" data-icon="arrow-r">我们</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+        <div data-role="navbar" data-iconpos="bottom">
+            <ul>
+                <li><a href="#" data-icon="home">首页</a></li>
+                <li><a href="#" data-icon="arrow-r">我们</a></li>
+                <li><a href="#" data-icon="search">搜索</a></li>
+            </ul>
+        </div>
+
+
+
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="home">首页</a></li>
+                <li><a href="#pageTwo" data-icon="arrow-r">下一页</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+    <div data-role="main">
+        <p>我的内容。。。。。</p>
+    </div>
+    <div data-role="footer">
+        <h1>我的底部</h1>
+    </div>
+</div>
+
+
+
+<div data-role="page" id="pageTwo">
+    <div data-role="header">
+        <h1>欢迎访问我的主页</h1>
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#pageOne" data-icon="home">首页</a></li>
+                <li><a href="#" class="ui-btn-active ui-state-persist" data-icon="arrow-r">下一页</a></li>
+            </ul>
+        </div>
+    </div>
+    <div data-role="main" class="ui-content">
+        <p>本页中没有被预选的按钮（突出显示）。</p>
+        <p>如需让按钮被选的外观表示当前正在访问页面，请返回导航栏教程，继续向下阅读。</p>
+    </div>
+
+    <div data-role="footer">
+        <h1>我的页脚</h1>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageOne">
+        <div data-role="header" data-theme="b">
+            <h1>滚屏事件</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p><b>提示：</b>如果未出现滚动条，请尝试调整窗口尺寸。</p>
+            <p>可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。
+                可用于滚动的文本。。可用于滚动的文本。。可用于滚动的文本。。</p>
+        </div>
+        <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).on("pagecreate","#pageOne",function(){
+        $(document).on("scrollstart",function(){
+           $("#pageOne").css("background-color",getRandomColor());
+        });
+        $(document).on("scrollstop",function(){
+            alert("停止滚动!");
+        });
+    })
+
+    function getRandomColor()
+    {
+        var c = '#';
+        var cArray = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+        for(var i = 0; i < 6;i++)
+        {
+            var cIndex = Math.round(Math.random()*15);
+            c += cArray[cIndex];
+        }
+        return c;
+    }
+</script>
+</html>

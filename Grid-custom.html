@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        .ui-block-a, .ui-block-b, .ui-block-c {
+            background-color: lightgray;
+            border: 1px solid black;
+            height: 100px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>自定义列</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <p>三列样式布局：</p>
+        <div class="ui-grid-b">
+            <div class="ui-block-a"><span>第一个列</span></div>
+            <div class="ui-block-b"><span>第二个列</span></div>
+            <div class="ui-block-c"><span>第三个列</span></div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

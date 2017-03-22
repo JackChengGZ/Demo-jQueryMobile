@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>表单类型</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form action="hello.php" method="post">
+                <div class="ui-field-contain">
+                    <label for="fullname">全名:</label>
+                    <input for="fullname" type="text" id="fullname">
+                    <label for="bday">生日:</label>
+                    <input type="date" name="bday" id="bday"/>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="你的电子邮箱..."/>
+                    <label for="info">附加信息:</label>
+                    <textarea name="addinfo" id="info" cols="30" rows="10"></textarea>
+                    <label for="search">搜索:</label>
+                    <input type="search" name="search" id="search" placeholder="搜索内容..."/>
+                    <filedset  data-role="controlgroup">
+                        <legend>请选择您的性别:</legend>
+                        <label for="male">男性</label>
+                        <input type="radio" name="gender" id="male" value="male"/>
+                        <label for="female">女性</label>
+                        <input type="radio" name="gender" id="female" value="female"/>
+                    </filedset>
+                    <filedset data-role="controlgroup">
+                        <legend>请选择您喜爱的颜色:</legend>
+                        <label for="red">红色</label>
+                        <input type="checkbox" name="favcolor" id="red" value="red"/>
+                        <label for="green">绿色</label>
+                        <input type="checkbox" name="favcolor" id="green" value="green"/>
+                        <label for="blue">蓝色</label>
+                        <input type="checkbox" name="favcolor" id="blue" value="blue"/>
+                    </filedset>
+                    <filedset data-role="controlgroup" data-type="horizontal">
+                        <legend>请选择您的性别:</legend>
+                        <label for="male1">男性</label>
+                        <input type="radio" name="gender" id="male1" value="male"/>
+                        <label for="female1">女性</label>
+                        <input type="radio" name="gender" id="female1" value="female"/>
+                    </filedset>
+                </div>
+                <input type="submit" data-inline="true" value="提交"/>
+            </form>
+
+
+            <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">弹窗中使用表单</a>
+
+            <div data-role="popup" id="myPopup" class="ui-content" style="min-width: 250px">
+                <form action="hello.php" method="post">
+                    <div>
+                        <h3>登录信息</h3>
+                        <label for="usrnm" class="ui-hidden-accessible">用户名:</label>
+                        <input type="text" name="user" id="usrnm" placeholder="用户名"/>
+                        <label for="pwd" class="ui-hidden-accessible">密码:</label>
+                        <input type="password" name="passw" id="pwd" placeholder="密码"/>
+                        <label for="log">记住密码</label>
+                        <input type="checkbox" name="login" id="log" value="1" data-mini="true"/>
+                        <input type="submit" data-inline="true" value="登录"/>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

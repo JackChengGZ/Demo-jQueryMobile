@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header" data-theme="b">
+            <h1>方向改变事件</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>请试着旋转您的设备!</p>
+            <p><b>注释:</b>您必须使用移动设备或者移动模拟器来查看该事件的效果。</p>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+            <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        </div>
+        <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).on("pagecreate",function(){
+        $(window).on("orientationchange",function(event){
+            if(window.orientation == 0) // Portrait
+            {
+                $(".ui-content").css({"font-size":"300%"});
+            }
+            else // Landscape
+            {
+                $(".ui-content").css({"font-size":"200%"});
+            }
+        });
+    })
+</script>
+</html>

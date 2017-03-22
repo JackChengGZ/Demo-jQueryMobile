@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageOne">
+         <div data-role="header">
+             <h1>按钮</h1>
+         </div>
+        <div data-role="main" class="ui-content">
+            <p>欢迎！</p>
+            <a href="#pageTwo" class="ui-btn">通过导航按钮访问data-role="button"页面</a>
+            <a href="#pageTwo" class="ui-btn">普通 / 默认按钮访问内联按钮页面</a>
+            <div data-role="controlgroup" data-type="vertical">
+                <p>垂直组合按钮(默认):</p>
+                <a href="#" class="ui-btn">按钮1</a>
+                <a href="#" class="ui-btn">按钮2</a>
+                <a href="#" class="ui-btn">按钮3</a>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal">
+                <p>水平组合按钮:</p>
+                <a href="#" class="ui-btn">按钮1</a>
+                <a href="#" class="ui-btn">按钮2</a>
+                <a href="#" class="ui-btn">按钮3</a>
+            </div>
+            <a href="#pageTwo" class="ui-btn">后退按钮形式访问第二个页面</a>
+            <a href="#" class="ui-btn ui-btn-inline">灰色默认</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-btn-b">黑色按钮</a>
+            <a href="#" class="ui-btn ui-btn-inline  ui-corner-all">圆角按钮</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini">小按钮</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-shadow">阴影按钮</a>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+
+
+    <div data-role="page" id="pageTwo">
+        <div data-role="header">
+            <h1>按钮</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>再见！</p>
+            <a href="#pageOne" data-role="button">通过data-role="button"返回到第一个页面</a>
+            <a href="#pageOne" class="ui-btn ui-btn-inline">内联按钮 (一个接一个显示):返回第一个页面</a>
+            <a href="#pageOne" class="ui-btn ui-btn-inline">内联按钮 (一个接一个显示):返回第一个页面</a>
+            <a href="#pageOne" class="ui-btn ui-btn-inline">内联按钮 (一个接一个显示):返回第一个页面</a>
+            <a href="#" class="ui-btn" data-rel="back">data-rel="back"后退返回</a>
+        </div>
+
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

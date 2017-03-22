@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>表单基础</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form action="hello.php" method="post">
+                <label for="fname">姓名:</label>
+                <input type="text" name="fname" id="fname"/>
+                <input type="submit" data-inline="true" value="提交"/>
+            </form>
+
+            <form action="hello.php" method="post">
+                <label for="fname2" class="ui-hidden-accessible">姓名:</label>
+                <input type="text" name="fname2" id="fname2" placeholder="请输入姓名....."/>
+                <input type="submit" data-inline="true" value="提交"/>
+            </form>
+
+            <form action="hello.php" method="post">
+                <p>在输入框中输入内容，查看输入框右侧是否出现 X 图标：</p>
+                <label for="fname3"><b>姓名:</b></label>
+                <input type="text" name="fname3" id="fname3" data-clear-btn="true"/>
+            </form>
+
+            <form action="hello.php" method="post">
+                <!--
+                如果需要在 <input> 按钮中添加额外的样式，可以使用下表中的 data-* 属性：
+                data-corners	true | false	指定按钮是否有圆角
+                data-icon	图标参考手册	指定按钮图标
+                data-iconpos	left | right | top | bottom | notext	指定图标位置
+                data-inline	true | false	指定是否内联按钮
+                data-mini	true | false	指定是否为迷你按钮
+                data-shadow	true | false	指定按钮是否添加阴影效果
+                -->
+                <label for="fname4">写下你的姓名并提交：</label>
+                <input type="text" name="fname" id="fname4">
+                <input type="button" value="无效按钮">
+                <input type="reset" value="重置按钮">
+                <input type="submit" value="提交按钮">
+            </form>
+
+
+            <form action="hello.php" method="post">
+                <div class="ui-field-contain">
+                    <label for="fname5">名:</label>
+                    <input type="text" name="fname" id="fname5">
+                    <label for="lname">姓:</label>
+                    <input type="text" name="lname" id="lname"><br/>
+                    <input type="submit" data-inline="true" value="提交">
+                    <p>"ui-field-contain" 类 基于页面宽度来设置 label 和表单控件的样式。当页面宽度大于 480px 时，
+                        它会自动将 label 与表单控件放置于同一行。当小于 480px 时，label 会被放置于表单元素之上。</p>
+                </div>
+            </form>
+
+            <form action="hello.php" method="post">
+                <label for="fname6">姓 （已设置 data-role="none"）：</label>
+                <input type="text" name="fname" id="fname6" data-role="none">
+                <label for="fname7">名 （未设置 data-role="none"）：</label>
+                <input type="text" name="fname" id="fname7">
+                <input type="submit" data-inline="true" value="提交">
+            </form>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

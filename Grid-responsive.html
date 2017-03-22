@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+    <div data-role="header">
+        <h1>网格布局</h1>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <h3>多行:</h3>
+        <p>三列布局:</p>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-b" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-c" style="border:1px solid black;"><span>一些文本</span></div>
+        </div>
+        <p>多行的三列布局:</p>
+        <div class="ui-grid-b">
+            <div class="ui-block-a" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-b" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-c" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-a" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-b" style="border:1px solid black;"><span>一些文本</span></div>
+            <div class="ui-block-a" style="border:1px solid black;"><span>一些文本</span></div>
+        </div>
+
+
+        <h3>慢慢重置窗口大小。布局会根据浏览器的宽度变化自适应大小:</h3>
+        <div class="ui-grid-b ui-responsive">
+            <div class="ui-block-a">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第一列按钮</a><br>
+                <span>第一列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+            <div class="ui-block-b">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第二列按钮</a><br>
+                <span>第二列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+            <div class="ui-block-c">
+                <a href="#" class="ui-btn ui-corner-all ui-shadow">第三列按钮</a><br>
+                <span>第三列: 这是一些文本。 这是一些文本。 这是一些文本。 这是一些文本。</span>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="footer">
+        <h1>底部文本</h1>
+    </div>
+</div>
+
+</body>
+</html>

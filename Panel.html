@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageone">
+        <!--data-dismissible:true | false	指定面板是否可以通过点击面板外部区域来关闭。
+       data-swipe-close:true | false	指定是否可以通过滑动来关闭。
+       你可以使用按钮来关闭面板：仅需要在面板的 <div> 中添加 data-rel="close" 属性。
+        从性能上考虑，我们需要键关闭链接的 href 属性指向页面的 ID 。
+
+
+        通过使用 data-display 属性来控制面板的展示方式:
+            data-display="overlay"	在内容上显示面板,
+            data-display="push"	是同时"推动"面板和页面。
+            data-display="reveal"	默认值，将页面像幻灯片一样从屏幕划出，将面板显示出来
+       -->
+        <div data-role="panel" id="myPanel">
+            <h2>滑出面板(默认)</h2>
+            <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。</p>
+            <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+        </div>
+
+        <div data-role="panel" id="overlayPanel" data-display="overlay">
+            <h2>覆盖面板</h2>
+            <p>你可以通过点击面板外部区域或按下 Esc 键或滑动来关闭面板。</p>
+            <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+        </div>
+
+        <div data-role="panel" id="pushPanel" data-display="push">
+            <h2>推动面板</h2>
+            <p>你可以通过点击面板外部区域或按下Esc键或滑动来关闭面板。</p>
+            <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">关闭面板</a>
+        </div>
+
+        <div data-role="header">
+            <h1>欢迎访问我的主页</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p><b>点击按钮打开面板</b></p>
+            <a href="#myPanel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline">滑出面板</a>
+            <p><b>点击以下按钮查看面板的不同展示方式。</b></p>
+            <a href="#overlayPanel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline">覆盖面板</a>
+            <a href="#pushPanel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline">推动面板</a>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

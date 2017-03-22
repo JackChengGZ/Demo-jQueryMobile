@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" >
+        <!--a	页面为灰色背景黑色文字
+        头部与底部均为灰色背景黑色文字
+        按钮为灰色背景黑色文字
+        激活的按钮和链接为白色文本蓝色背景
+        input 输入框中 placeholder 属性值为浅灰色，value 值为黑色
+        b	页面为黑色背景白色文字
+        头部与底部均为黑色背景白色文字
+        按钮为白色文字木炭背景
+        激活的按钮和链接为白色文本蓝色背景
+        input 输入框中 placeholder 属性值为浅灰色，value 值为白色-->
+
+        <div data-role="header" data-theme="b">
+            <h1>关于主题</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>一些文本..</p>
+            <a href="#">标准连接</a>
+            <a href="#" class="ui-btn">连接按钮</a>
+            <p>列表:</p>
+            <ul data-role="listview" data-autodividers="true" data-inset="true">
+                <li><a href="#">Ann</a></li>
+                <li><a href="#">Bom</a></li>
+            </ul>
+            <label for="fullname">输入框:</label>
+            <input type="text" name="fullname" id="fullname" placeholder="请输入名字"/>
+            <label for="switch">切换开关:</label>
+            <select name="switch" id="switch" data-role="slider">
+                <option value="on">On</option>
+                <option value="off" selected>Off</option>
+            </select>
+        </div>
+        <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

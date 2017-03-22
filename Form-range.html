@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page">
+        <div data-role="header">
+            <h1>滑块控件</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <form action="hello.php" method="post">
+                <label for="points">进度:</label>
+                <input type="range" name="points" id="points" value="50" min="0" max="100"/>
+
+                <label for="points2">进度:</label>
+                <input type="range" name="points2" id="points2" value="50" min="0" max="100" data-show-value="true"/>
+
+                <label for="points3">进度:</label>
+                <input type="range" name="points3" id="points3" value="50" min="0" max="100" data-highlight="true"/>
+
+                <label for="switch">切换开关:</label>
+                <input type="checkbox" data-role="flipswitch" name="switch" id="switch"/>
+
+                <label for="switch2">切换开关:</label>
+                <input type="checkbox" data-role="flipswitch" name="switch2" id="switch2" data-on-text="开" data-off-text="关" checked/>
+                <input type="submit" data-inline="true" value="提交"/>
+            </form>
+        </div>
+        <div data-role="footer">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+</html>

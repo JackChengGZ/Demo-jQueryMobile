@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>页面2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="jquery.mobile-1.4.5/jquery-1.11.3.js"></script>
+    <script src="jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <div data-role="page" id="pageOne">
+        <div data-role="header" data-theme="b">
+            <h1>触摸事件</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p class="tap">tap事件,点击我会消失</p>
+            <p class="taphold">taphold事件，点击我保持一秒会消失</p>
+            <p>在下面的文本框内滑动</p>
+            <p style="border: 1px solid #000000;height: 200px;width: 200px;" class="swipe"></p>
+            <p>在下面的文本框内滑动</p>
+            <p style="border: 1px solid #000000;height: 200px;width: 200px;" class="swipeleft"></p>
+            <p>在下面的文本框内滑动</p>
+            <p style="border: 1px solid #000000;height: 200px;width: 200px;" class="swiperight"></p>
+        </div>
+        <div data-role="footer" data-theme="b">
+            <h1>底部文本</h1>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).on("pagecreate","#pageOne", function () {
+        $(".tap").on("tap",function(){
+            $(this).hide();
+        })
+        $(".taphold").on("taphold",function(){
+            $(this).hide();
+        })
+        $(".swipe").on("swipe",function(){
+            $(this).text("滑动检测!");
+        })
+        $(".swipeleft").on("swipeleft",function(){
+            $(this).text("向左滑动!");
+        })
+        $(".swiperight").on("swiperight",function(){
+            $(this).text("向右滑动!");
+        })
+    })
+</script>
+</html>
